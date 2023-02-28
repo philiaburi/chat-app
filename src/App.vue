@@ -1,12 +1,23 @@
 <template>
-  <div id="app">
+  <v-app>
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <BaseHeader></BaseHeader>
     </nav>
-    <router-view />
-  </div>
+    <v-main style="background: #e8e2df">
+      <v-container fluid>
+        <router-view />
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
+<script>
+import BaseHeader from "./components/BaseHeader.vue";
+export default {
+  components: {
+    BaseHeader,
+  },
+};
+</script>
 
 <style>
 #app {
